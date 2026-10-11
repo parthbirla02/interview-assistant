@@ -1,0 +1,15 @@
+{
+  "name": "interview-assistant-workspace",
+  "version": "1.0.0",
+  "description": "AI-Powered Full-Stack Interview Assistant (MERN + OpenAI)",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "seed": "npm --prefix backend run seed",
+    "build": "npm --prefix backend install && npm --prefix frontend install && npm --prefix frontend run build"
+  },
+  "keywords": ["mern", "openai", "interview-assistant", "ai-mock-interview"],
+  "author": "",
+  "license": "ISC"
+}
