@@ -1,9 +1,15 @@
 const OpenAI = require('openai');
 
 let openaiClient = null;
-if (process.env.OPENAI_API_KEY && process.env.OPENAI_API_KEY.trim() !== '') {
+
+if (process.env.OPENROUTER_API_KEY?.trim()) {
   openaiClient = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    baseURL: 'https://openrouter.ai/api/v1',
+    apiKey: process.env.OPENROUTER_API_KEY,
+    defaultHeaders: {
+      'HTTP-Referer': 'http://localhost:5173',
+      'X-Title': 'AI Interview Assistant',
+    },
   });
 }
 

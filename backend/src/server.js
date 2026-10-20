@@ -40,7 +40,7 @@ app.get('/api/health', (req, res) => {
     status: 'online',
     service: 'AI Interview Assistant Backend',
     timestamp: new Date().toISOString(),
-    openaiConfigured: Boolean(process.env.OPENAI_API_KEY && process.env.OPENAI_API_KEY.trim() !== ''),
+    openaiConfigured: Boolean(process.env.OPENROUTER_API_KEY && process.env.OPENROUTER_API_KEY.trim() !== ''),
   });
 });
 
